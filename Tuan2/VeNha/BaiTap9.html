@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Bài tập 9</title>
+    <style>
+        /* CSS tối thiểu để định dạng form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ol {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        /* Định dạng cho input type=text, number, date, url */
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="url"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            width: auto;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            
+            /* CĂN GIỮA BUTTON */
+            display: block; 
+            margin: 15px auto 0 auto; 
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <form method="post" action="#" id="quiz">
+        <ol>
+            <li>
+                <label for="q1">What color do you get when you mix red and yellow?</label>
+                <input 
+                    type="text" 
+                    name="q1" 
+                    id="q1" 
+                    required 
+                    placeholder="Type color here"
+                    title="Nhập tên màu"
+                >
+            </li>
+            <li>
+                <label for="q2">What is the first prime number greater than 20?</label>
+                <input 
+                    type="number" 
+                    name="q2" 
+                    id="q2" 
+                    min="20" 
+                    step="1" 
+                    required 
+                    placeholder="Type number here"
+                >
+            </li>
+            <li>
+                <label for="q3">Using exactly four 9s and no other digits, write an equation which evaluates to 100. You may use addition (+), subtraction (-), multiplication (*), and division (/). Do not include spaces.</label>
+                <input 
+                    type="text" 
+                    name="q3" 
+                    id="q3" 
+                    required 
+                    placeholder="Type your answer here"
+                    title="Chỉ chấp nhận các số 9 và phép toán (+,-,*,/)"
+                    pattern="[9\+\-\*\/]{7}" 
+                >
+            </li>
+            <li>
+                <label for="q4">What date was John F. Kennedy assassinated?</label>
+                <input 
+                    type="date" 
+                    name="q4" 
+                    id="q4" 
+                    required 
+                    placeholder="Ngày/Tháng/Năm"
+                >
+            </li>
+            <li>
+                <label for="q5">What is the world's most popular search engine?</label>
+                <input 
+                    type="url" 
+                    name="q5" 
+                    id="q5" 
+                    required 
+                    placeholder="Paste your favourite search engine here"
+                >
+            </li>
+        </ol>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
