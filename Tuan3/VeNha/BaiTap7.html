@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập 7</title>
+    <style>
+        /* Toàn bộ vùng chứa */
+        #wrapper {
+            width: 250px;
+            margin: 20px auto; /*căn giữa khối*/
+            border: 2px solid black; /*viền ngoài*/
+            padding: 5px; /* khoảng cách từ viền ngoài tới phần tử bên trong */
+            position: relative; /*ghi chữ ngoài khung */
+        }
+
+        /*"wrapper" nằm ngoài cùng góc trên trái*/
+        #wrapper::before {
+            content: "wrapper";
+            position: absolute;
+            top: -20px; /* nằm phía trên khung */
+            left: 0; /* sát mép trái */
+            background: white; /* nền trắng che viền bên dưới */
+            padding: 0 5px;
+        }
+        /* Header */
+        header {
+            border: 2px solid black;
+            height: 30px;
+            margin-bottom: 10px; /* cách phần dưới 1 chút */
+            text-align: left;
+            padding-left: 10px; /* chữ cách viền trái */
+            line-height: 30px; /* căn chữ giữa chiều cao */
+        }
+        /*Nav và Main*/
+        nav {
+            border: 2px solid black;
+            width: 35px;
+            height: 200px;
+            float: left;
+            text-align: left;
+            padding-left: 5px;
+            margin-right: 10px;
+        }
+        main {
+            border: 2px solid black;
+            height: 200px;
+            overflow: hidden; /*Ẩn phần nội dung bị tràn ra ngoài khung*/
+            text-align: left;
+            padding-left: 10px;
+        }
+        footer {
+            border: 2px solid black;
+            height: 30px;
+            text-align: left;
+            padding-left: 10px; /* chữ cách viền trái */
+            line-height: 30px; /* căn chữ giữa chiều cao */
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>header</header>
+        <nav>nav</nav>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>

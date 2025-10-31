@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập 8b</title>
+    <style>
+    /* ====== KHUNG CHỨA LỚN ====== */
+    #root {
+      width: 1024px;
+      margin: 0 auto;
+    }
+
+    /* ====== TIÊU ĐỀ ====== */
+    /* --- Header có logo và tiêu đề --- */
+#site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c4c4c4;
+  color: black;
+  padding: 12px;
+  text-shadow: 1px 1px 2px white;
+  border-radius: 6px;
+}
+#site-header img {
+  width: 80px;          /* giảm kích thước logo – có thể chỉnh nhỏ hơn, ví dụ 60px */
+  height: auto;         /* giữ tỷ lệ gốc */
+  margin-right: 12px;   /* tạo khoảng cách giữa logo và chữ */
+}
+
+    /* ====== DANH SÁCH HERO ====== */
+    .superheroes {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* ====== MỖI Ô HERO ====== */
+    .superheroes li {
+      width: 180px;
+      display: inline-block;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    /* ====== ẢNH HERO ====== */
+    .superheroes img {
+      max-width: 100%;
+      display: block;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    /* ====== TÊN HERO (chữ ở trên ảnh) ====== */
+    .hero-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.4); /* làm mờ nền */
+      padding: 8px 0;
+      opacity: 0.6; /* mờ nhẹ */
+      transition: all 0.3s ease;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    /* ====== NÚT READ MORE ====== */
+    .superheroes a {
+      display: none;
+      width: 100%;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 8px 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    /* ====== HIỆU ỨNG HOVER ====== */
+    .superheroes li:hover {
+      transform: scale(1.1); /* phóng to ô */
+      z-index: 10;
+    }
+    
+    .superheroes li:hover .hero-header {
+      opacity: 1; /* chữ rõ nét hơn */
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .superheroes li:hover img {
+      transform: scale(1.05); /* zoom ảnh nhẹ */
+    }
+
+    .superheroes li:hover a {
+      display: block;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1 id="site-header">
+      <img src="imgs/logo.png" alt="logo">
+      <span>The Bat family</span>
+    </h1>
+    <ul class="superheroes">
+      <li>
+        <strong class="hero-header">Batman</strong>
+        <img src="imgs/superhero-1.jpg" alt="Batman">
+        <a href="https://en.wikipedia.org/wiki/Batman">Read more</a>
+      </li>
+      <li>
+        <strong class="hero-header">Batwing</strong>
+        <img src="imgs/superhero-2.jpg" alt="Batwing">
+        <a href="https://en.wikipedia.org/wiki/Batwing_(DC_Comics)">Read more</a>
+      </li>
+      <li>
+        <strong class="hero-header">Batgirl</strong>
+        <img src="imgs/superhero-3.jpg" alt="Batgirl">
+        <a href="https://en.wikipedia.org/wiki/Batgirl">Read more</a>
+      </li>
+      <li>
+        <strong class="hero-header">Nightwing</strong>
+        <img src="imgs/superhero-4.jpg" alt="Nightwing">
+        <a href="https://en.wikipedia.org/wiki/Nightwing">Read more</a>
+      </li>
+      <li>
+        <strong class="hero-header">Red Robin</strong>
+        <img src="imgs/superhero-5.jpg" alt="Red Robin">
+        <a href="https://en.wikipedia.org/wiki/Red_Robin_(comics)">Read more</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

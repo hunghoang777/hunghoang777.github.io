@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài Tập 6</title>
+<style>
+  /*Toàn trang*/
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  /*Tiêu đề chính*/
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+  }
+
+  /*Dấu gạch xanh*/
+  h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #00b3b3;
+    margin: 15px auto 0;
+  }
+
+  /*Danh sách tab*/
+  .list-tab {
+    list-style-type: none; /* bỏ dấu chấm đầu dòng */
+    padding: 0; /*khoảng đệm 0 để nội dung sát mép viền*/
+  }
+  .list-tab li {
+    display: inline-block; /*nằm ngang*/
+    margin: 0 10px;
+  }
+
+  .list-tab a {
+    text-decoration: none; /*bỏ gạch chân*/
+    color: #333;
+    font-weight: bold;
+  }
+
+  /*Mục “All” màu xanh*/
+  .list-tab li:first-child a {
+    color: #00b3b3;
+  }
+  /*Các khối*/
+  .galerry {
+    list-style-type: none;
+    padding: 0; /*khoảng cách đệm bên trong của thẻ <ul>*/
+  }
+  .galerry li {
+    display: inline-block;
+    margin: 10px;
+  }
+  /*Định dạng khối và chữ*/
+  .galerry a {
+    display: inline-block;
+    width: 350px;
+    height: 260px;
+    background-color: #8BC34A;
+    color: white; 
+    font-size: 22px;
+    line-height: 260px;        /* căn giữa theo chiều dọc */
+    text-decoration: none;
+  }
+</style>
+</head>
+
+<body>
+  <section class="portfolio">
+    <h2>MY PORTFOLIO</h2>
+
+    <ul class="list-tab">
+      <li><a href="./">All</a></li>
+      <li><a href="./">Web App</a></li>
+      <li><a href="./">UI/UX</a></li>
+      <li><a href="./">Graphics Design</a></li>
+      <li><a href="./">Mobile App</a></li>
+      <li><a href="./">Branding</a></li>
+      <li><a href="./">Marketing</a></li>
+    </ul>
+
+    <ul class="galerry">
+      <li><a href="./">Học Web Chuẩn</a></li>
+      <li><a href="./">Học Web Chuẩn</a></li>
+      <li><a href="./">Học Web Chuẩn</a></li>
+    </ul>
+  </section>
+</body>
+</html>
